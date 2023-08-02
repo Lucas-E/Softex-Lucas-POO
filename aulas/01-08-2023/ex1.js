@@ -5,7 +5,7 @@ class Pessoa {
     }
 
     apresentar(){
-        return `${this.nome} tem ${this.idade} anos`
+        return `${this.nome} tem ${this._idade} anos`
     }
     getIdade(){
         return this._idade

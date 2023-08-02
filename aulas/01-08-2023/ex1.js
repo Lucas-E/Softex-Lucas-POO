@@ -5,7 +5,7 @@ class Pessoa {
     }
 
     apresentar(){
-        `${this.nome} tem ${this.idade} anos`
+        return `${this.nome} tem ${this.idade} anos`
     }
 }
 
@@ -17,4 +17,4 @@ class Aluno extends Pessoa{
 }
 
 const aluno1 = new Aluno('001', 'Lucas', 23)
-
+console.log(aluno1.apresentar())

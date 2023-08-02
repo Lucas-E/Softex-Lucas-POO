@@ -1,11 +1,17 @@
 class Pessoa {
     constructor(nome, idade){
         this.nome = nome
-        this.idade = idade
+        this._idade = idade
     }
 
     apresentar(){
         return `${this.nome} tem ${this.idade} anos`
+    }
+    getIdade(){
+        return this._idade
+    }
+    setIdade(idade){
+        this._idade = idade
     }
 }
 

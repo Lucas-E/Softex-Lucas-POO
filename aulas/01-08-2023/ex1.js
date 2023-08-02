@@ -5,6 +5,16 @@ class Pessoa {
     }
 
     apresentar(){
-        console.log(`${this.nome} tem ${this.idade} anos`)
+        `${this.nome} tem ${this.idade} anos`
     }
 }
+
+class Aluno extends Pessoa{
+    constructor(matricula, nome, idade){
+        super(nome, idade)
+        this.matricula = matricula
+    }
+}
+
+const aluno1 = new Aluno('001', 'Lucas', 23)
+

@@ -10,6 +10,13 @@ class Pessoa{
   apresentar():string{
     return `${this.nome} tem ${this.idade} anos`
   }
+
+  getIdade():number{
+    return this.idade
+  }
+  setIdate(idade:number):void{
+    this.idade = idade
+  }
 }
 
 
@@ -24,3 +31,4 @@ class Aluno extends Pessoa{
 const aluno1:Aluno = new Aluno('001', 23, 'lucas')
 
 console.log(aluno1.apresentar())
+console.log(aluno1.idade)

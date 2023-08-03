@@ -2,11 +2,19 @@
   "name": "softex-poo",
   "version": "1.0.0",
   "description": "modulo de poo do curso softex",
-  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "tsc": "tsc",
+    "ts-node": "ts-node"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
 }

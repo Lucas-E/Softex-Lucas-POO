@@ -18,11 +18,11 @@ const Header = () => {
 								React, Typescript e Tailwindcss.
 							</p>
 							<button className="mt-4 px-5 py-3 rounded border border-projectBlue text-projectBlue w-auto hover:translate-y-1 hover:bg-projectBlue hover:text-white bg-none  transition-transform hover:transition-transform">
-								Read More
+								Vá para a biblioteca
 							</button>
 						</div>
 					</div>
-					<div className="flex-1 hidden lg:block ">
+					<div className="flex-1 hidden lg:flex flex-col items-center justify-center">
 						<img src={GroupMask} alt="" className="w-[713px]" />
 					</div>
 				</div>

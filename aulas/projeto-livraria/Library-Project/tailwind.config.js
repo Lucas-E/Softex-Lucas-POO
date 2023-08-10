@@ -11,6 +11,12 @@ export default {
       },
       backgroundImage: {
         'HeaderImage':"url('./src/assets/images/MaskGroup.png')"
+      },
+      spacing: {
+        'ebook':'555px'
+      },
+      fontFamily: {
+        'bebas':['Bebas Neue']
       }
     },
   },

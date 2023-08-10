@@ -14,7 +14,8 @@ const Root = () => {
 		<React.Fragment>
 			<nav>
 				{/* md upper navbar */}
-				<div className="hidden w-100 px-4 md:flex flex-row justify-center bg-projectBlue">
+				<div className="hidden w-100 px-4 md:flex flex-row justify-around bg-projectBlue items-center">
+					<div className="text-white font-bebas text-3xl">softex</div>
 					<ul className="flex flex-row text-xl items-center text-white">
 						<li className=" px-5 py-3 hover:bg-slate-500 hover:bg-opacity-50  cursor-pointer">
 							Home
@@ -30,7 +31,7 @@ const Root = () => {
 
 				{/* sm navbar */}
 				<div className="absolute md:hidden z-20">
-					<button onClick={handleOpen} className="md:hidden">
+					<button onClick={handleOpen} className="md:hidden border rounded m-5">
 						<Hamburger />
 					</button>
 				</div>

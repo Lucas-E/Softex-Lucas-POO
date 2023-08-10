@@ -14,7 +14,7 @@ const Root = () => {
 		<React.Fragment>
 			<nav>
 				{/* md upper navbar */}
-				<div className="md:block w-100 px-4 flex flex-row justify-center bg-projectBlue">
+				<div className="hidden w-100 px-4 md:flex flex-row justify-center bg-projectBlue">
 					<ul className="flex flex-row text-xl items-center text-white">
 						<li className=" px-5 py-3 hover:bg-slate-500 hover:bg-opacity-50  cursor-pointer">
 							Home

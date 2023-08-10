@@ -6,7 +6,7 @@ const EbookSection = () => {
 		<React.Fragment>
 			<section className="h-ebook flex flex-row bg-projectBlue/10">
 				<div className="flex flex-col justify-center items-center flex-1 h-full p-10">
-					<h1 className="font-bold text-4xl text-projectBlue leading-relaxed">
+					<h1 className="font-bold text-2xl md:text-2xl text-projectBlue leading-relaxed">
 						Acesse, crie usuários, cadastre livros e empreste
 						livros, tudo isso utilizando o localStorage para dar a
 						impressão de persistência

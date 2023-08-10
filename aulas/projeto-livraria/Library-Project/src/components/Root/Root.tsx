@@ -31,13 +31,17 @@ const Root = () => {
 
 				{/* sm navbar */}
 				<div className="absolute md:hidden z-20">
-					<button onClick={handleOpen} className="md:hidden border rounded m-5">
+					<button
+						onClick={handleOpen}
+						className="md:hidden border rounded m-5"
+					>
 						<Hamburger />
 					</button>
 				</div>
 				{open && (
-					<div className="absolute w-full h-screen bg-projectBlue flex flex-col items-center justify-between text-white z-10">
-						<ul className="font-bold text-4xl h-full flex flex-col items-center justify-center">
+					<div className="absolute w-full h-screen bg-projectBlue flex flex-col items-center justify-center text-white z-10">
+						<h2 className="text-4xl font-bold mb-20">SOFTEX</h2>
+						<ul className="font-bold text-4xl flex flex-col items-center justify-center">
 							<li className="hover:">Home</li>
 							<li className="my-12">Library</li>
 							<li>FAQ</li>

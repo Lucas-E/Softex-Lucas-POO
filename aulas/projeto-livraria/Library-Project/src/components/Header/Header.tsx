@@ -9,14 +9,13 @@ const Header = () => {
 					<div className="p-5 flex-1 flex flex-col items-center justify-center lg:bg-gradient-to-r from-gray-400 to-white">
 						<div className="flex flex-col h-100 justify-center w-10/12">
 							<h1 className="text-6xl text-projectBlue font-bold my-8 drop-shadow-md">
-								Ipsum Dolor Si
+								Biblioteca Softex
 							</h1>
 							<p className="leading-loose text-projectBlue text-xl">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Cumque, sequi. Odit id impedit
-								sapiente, eveniet, quaerat quis placeat
-								molestias corrupti repellendus culpa sint,
-								dolores expedita veniam natus alias illo sequi.
+								Este projeto é parte da formação Softex. Este
+								projeto simula o funcionamento de uma biblioteca
+								utilizando POO. Neste projeto foi utilizado
+								React, Typescript e Tailwindcss.
 							</p>
 							<button className="mt-4 px-5 py-3 rounded border border-projectBlue text-projectBlue w-auto hover:translate-y-1 hover:bg-projectBlue hover:text-white bg-none  transition-transform hover:transition-transform">
 								Read More

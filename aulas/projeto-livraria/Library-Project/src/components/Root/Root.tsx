@@ -12,7 +12,7 @@ const Root = () => {
 
 	return (
 		<React.Fragment>
-			<nav>
+			<nav className="md:sticky md:top-0 md:z-20">
 				{/* md upper navbar */}
 				<div className="hidden w-100 px-4 md:flex flex-row justify-around bg-projectBlue items-center">
 					<div className="text-white font-bebas text-3xl">softex</div>
@@ -39,7 +39,7 @@ const Root = () => {
 					</button>
 				</div>
 				{open && (
-					<div className="absolute w-full h-screen bg-projectBlue flex flex-col items-center justify-center text-white z-10">
+					<div className="md:hidden absolute w-full h-full bg-projectBlue flex flex-col items-center justify-center text-white z-10">
 						<h2 className="text-4xl font-bold mb-20">SOFTEX</h2>
 						<ul className="font-bold text-4xl flex flex-col items-center justify-center">
 							<li className="hover:">Home</li>

@@ -30,7 +30,7 @@ const Root = () => {
 				</div>
 
 				{/* sm navbar */}
-				<div className="absolute md:hidden z-20">
+				<div className="fixed md:hidden z-20">
 					<button
 						onClick={handleOpen}
 						className="md:hidden border rounded m-5"
@@ -39,7 +39,7 @@ const Root = () => {
 					</button>
 				</div>
 				{open && (
-					<div className="md:hidden absolute w-full h-full bg-projectBlue flex flex-col items-center justify-center text-white z-10">
+					<div className="md:hidden w-full h-full bg-projectBlue flex flex-col items-center justify-center text-white z-10 fixed">
 						<h2 className="text-4xl font-bold mb-20">SOFTEX</h2>
 						<ul className="font-bold text-4xl flex flex-col items-center justify-center">
 							<li className="hover:">Home</li>

@@ -25,10 +25,10 @@ const EbookSection = () => {
 							className="p-5 rounded-l bg-white w-11/12 "
 							placeholder="Cadastre um usuário!"
 						/>
-                        <button className="bg-red-500 rounded-r p-4 text-white">Cadastrar</button>
+                        <button className="bg-red-500 hover:bg-red-600 active:bg-red-800 rounded-r p-4 text-white">Cadastrar</button>
 					</div>
 				</div>
-				<div className="flex-1 flex justify-center items-center">
+				<div className="hidden md:flex-1 lg:flex justify-center items-center">
 					<img src={EbookGirl} alt="" />
 				</div>
 			</section>

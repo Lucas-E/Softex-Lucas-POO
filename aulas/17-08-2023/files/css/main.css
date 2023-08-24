@@ -7,3 +7,7 @@
 .glass{
     backdrop-filter: blur(5px);
 }
+
+.pastel{
+    background-color: #ff6961;
+}

@@ -39,7 +39,6 @@
 
     function adicionaAluno() {
       var nomeAluno = document.getElementById("aluno").value;
-      console.log(nomeAluno)
       var aluno = new Aluno(nomeAluno)
       classe.alunos.push(aluno);
       insereAlunos(classe.alunos)
@@ -48,16 +47,16 @@
     function insereAlunos(alunos) {
       var lista = document.getElementById("lista");
       lista.innerHTML = '';
-      for (aluno of alunos) {
+      classe.alunos.map((element, index) => {
         var li = document.createElement('li')
-        li.id = classe.alunos.length - 1;
+        li.id = index;
         li.onclick = () => {
           classe.removeAluno(li.id);
           insereAlunos(classe.alunos)
         }
-        li.appendChild(document.createTextNode(aluno.nome))
+        li.appendChild(document.createTextNode(element.nome))
         lista.appendChild(li)
-      }
+      })
     }
 
   </script>

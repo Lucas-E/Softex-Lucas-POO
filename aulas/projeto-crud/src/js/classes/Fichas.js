@@ -1,6 +1,4 @@
-import { Player } from "./Player";
-
-class Fichas{
+export class Fichas{
     constructor(){
         this.players = [];
     }
@@ -25,7 +23,7 @@ class Fichas{
         player.setInteligencia(inteligencia);
     }
     deletePlayerById(id){
-        const index = players.findIndex(player => player.id === id)
-        this.players = this.player.splice(index, 1);
+        const index = this.players.findIndex(player => player.id == id)
+        this.players.splice(index, 1);
     }
 }

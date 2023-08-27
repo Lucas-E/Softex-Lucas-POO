@@ -36,7 +36,7 @@
 					class="collapse navbar-collapse"
 					id="navbarSupportedContent"
 				>
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
 						<li class="nav-item">
 							<a
 								class="nav-link active"
@@ -60,8 +60,8 @@
 							<h1 class="header-text text-center">RPGFY</h1>
 							<h3 class="text-center header-text-sub">
 								Crie fichas para seus personagens de rpg com
-								simplicidade e eficácia Defina classe, distribua
-								pontos e
+								simplicidade e eficácia!
+								Defina nome, classes e distribua seus atributos!
 							</h3>
 							<button class="w-100 mt-5 btn btn-light dot-button">
 								CRIAR FICHAS
@@ -77,9 +77,15 @@
 					<div class="d-flex align-items-center">
 						<h1>Lista de personagens</h1>
 					</div>
-					<button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#criarFichaModal">CRIAR FICHA</button>
+					<button
+						class="btn btn-outline-success"
+						data-bs-toggle="modal"
+						data-bs-target="#criarFichaModal"
+					>
+						CRIAR FICHA
+					</button>
 				</div>
-				<div class="mt-5">
+				<div class="mt-5 d-flex col-10 m-auto justify-content-around align-items-center flex-wrap" id="fichas">
 					<p class="fw-bold display-5 text-center">NONE</p>
 				</div>
 			</div>
@@ -120,19 +126,97 @@
 						></button>
 					</div>
 					<div class="modal-body">
-						
-					</div>
-					<div class="modal-footer">
-						<button
-							type="button"
-							class="btn btn-secondary"
-							data-bs-dismiss="modal"
-						>
-							Close
-						</button>
-						<button type="button" class="btn btn-primary">
-							Save changes
-						</button>
+						<form id="formPersonagem">
+							<div class="mb-3">
+								<label for="characterName" class="form-label"
+									>Nome do personagem</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="characterName"
+									name="characterName"
+								/>
+							</div>
+							<div class="mb-3">
+								<label
+									for="characterProfissao"
+									class="form-label"
+									>Profissao</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="characterProfissao"
+									aria-describedby="emailHelp"
+									name="characterProfissao"
+								/>
+							</div>
+							<div class="mb-3">
+								<label for="characterForca" class="form-label"
+									>Força</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="characterForca"
+									name="characterForca"
+								/>
+							</div>
+							<div class="mb-3">
+								<label for="characterVida" class="form-label"
+									>Vida</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="characterVida"
+									name="characterVida"
+								/>
+							</div>
+							<div class="mb-3">
+								<label for="characterMana" class="form-label"
+									>mana</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="characterMana"
+									name="characterMana"
+								/>
+							</div>
+							<div class="mb-3">
+								<label
+									for="characterInteligencia"
+									class="form-label"
+									>Inteligencia</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="characterInteligencia"
+									name="characterInteligencia"
+								/>
+							</div>
+							<div class="mb-3">
+								<label
+									for="characterDescricao"
+									class="form-label"
+									>Descrição do personagem</label
+								>
+								<input
+									type="text"
+									class="form-control"
+									id="characterDescricao"
+									name="characterDescricao"
+								/>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary">
+									Save changes
+								</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -144,5 +228,8 @@
 			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 			crossorigin="anonymous"
 		></script>
+
+		<!-- scripts gerais -->
+		<script type="module" src="./src/js/submitPersonagem.js"></script>
 	</body>
 </html>

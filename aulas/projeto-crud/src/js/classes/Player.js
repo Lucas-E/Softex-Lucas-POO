@@ -1,5 +1,5 @@
 export class Player {
-	constructor(nome, profissao, forca, vida, mana, inteligencia, id) {
+	constructor(nome, profissao, forca, vida, mana, inteligencia, id, descricao) {
         this.id = id;
 		this.nome = nome;
 		this.profissao = profissao;
@@ -7,6 +7,7 @@ export class Player {
 		this.vida = vida;
 		this.mana = mana;
 		this.inteligencia = inteligencia;
+		this.descricao = descricao;
 	}
 
 	//getters

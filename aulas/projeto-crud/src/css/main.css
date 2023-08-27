@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root{
+    --rpg-font: 'VT323', monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--rpg-font);
+}
+
+.navbar-glass{
+    backdrop-filter: blur(5px);
+}
+
+.header{
+    background-image: url('../img/header-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header-text-container{
+    border: 5px solid white;
+    box-shadow: 1px 1px 6px black;
+    backdrop-filter: blur(5px);
+}
+
+.header-text{
+    font-family: var(--rpg-font);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 10rem;
+}
+
+.header-text-sub{
+    font-family: var(--rpg-font);
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 4px 1px black;
+    font-size: 2rem;
+}
+
+.dot-button{
+    font-family: var(--rpg-font);
+    box-shadow: 1px 1px 3px black;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.dot-button:hover{
+    scale: 1.05;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}

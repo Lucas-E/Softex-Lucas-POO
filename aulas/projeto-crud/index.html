@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>rpgfy</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./src/css/main.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<div class="d-flex">
+						<img src="./src/img/logo.gif" alt="home" width="60px" />
+						FY
+					</div>
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse"
+					id="navbarSupportedContent"
+				>
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a
+								class="nav-link active"
+								aria-current="page"
+								href="#"
+								>Home</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row header vh-100">
+				<div class="col h-100 col-md-8 m-auto">
+					<div
+						class="d-flex flex-col h-100 justify-content-center align-items-center"
+					>
+						<div class="p-4 rounded header-text-container w-100">
+							<h1 class="header-text text-center">RPGFY</h1>
+							<h3 class="text-center header-text-sub">
+								Crie fichas para seus personagens de rpg com
+								simplicidade e eficácia Defina classe, distribua
+								pontos e
+							</h3>
+							<button class="w-100 mt-5 btn btn-light dot-button">
+								CRIAR FICHAS
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row p-3">
+				<div
+					class="d-flex flex-row align-items-center justify-content-around"
+				>
+					<div class="d-flex align-items-center">
+						<h1>Lista de personagens</h1>
+					</div>
+					<button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#criarFichaModal">CRIAR FICHA</button>
+				</div>
+				<div class="mt-5">
+					<p class="fw-bold display-5 text-center">NONE</p>
+				</div>
+			</div>
+			<div class="row bg-dark">
+				<div class="col h-100">
+					<div
+						class="d-flex flex-column h-100 justify-content-center"
+					>
+						<div>
+							<p class="text-light">
+								MADE WITH ❤️ AND JAVASCRIPT BY Lucas-E
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- modal add ficha -->
+		<div
+			class="modal fade"
+			id="criarFichaModal"
+			tabindex="-1"
+			aria-labelledby="criarFichaModal"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="criarFichaModal">
+							Insira os dados do seu personagem
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Close
+						</button>
+						<button type="button" class="btn btn-primary">
+							Save changes
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- scripts bootstrap -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

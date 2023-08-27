@@ -1,6 +1,15 @@
 export class Player {
-	constructor(nome, profissao, forca, vida, mana, inteligencia, id, descricao) {
-        this.id = id;
+	constructor(
+		nome,
+		profissao,
+		forca,
+		vida,
+		mana,
+		inteligencia,
+		id,
+		descricao
+	) {
+		this.id = id;
 		this.nome = nome;
 		this.profissao = profissao;
 		this.forca = forca;
@@ -30,13 +39,16 @@ export class Player {
 	getInteligencia() {
 		return this.inteligencia;
 	}
+	getDescricao() {
+		return this.descricao;
+	}
 
 	//setters
 
 	setNome(nome) {
 		this.nome = nome;
 	}
-	setProfissao() {
+	setProfissao(profissao) {
 		this.profissao = profissao;
 	}
 	setForca(forca) {
@@ -50,5 +62,8 @@ export class Player {
 	}
 	setInteligencia(inteligencia) {
 		this.inteligencia = inteligencia;
+	}
+	setDescricao(descricao) {
+		this.descricao = descricao;
 	}
 }

@@ -1,3 +1,4 @@
+
 import { Fichas } from "./classes/Fichas.js";
 import { Player } from "./classes/Player.js";
 
@@ -15,7 +16,10 @@ function renderizaPlayers() {
           <button class="btn btn-danger" id="character${
 				player.id
 			}">apagar</button>
-          <button class="btn btn-danger" id="editar${player.id}">editar</button>
+          <button class="btn btn-danger" id="editar${
+				player.id
+			}" data-bs-toggle="modal"
+          data-bs-target="#editarFichaModal">editar</button>
           <button class="btn btn-danger" id="ler${
 				player.id
 			}" data-bs-toggle="modal"
@@ -35,6 +39,11 @@ function renderizaPlayers() {
 		let readButton = document.getElementById(`ler${player.id}`);
 		readButton.addEventListener("click", (e) => {
 			lerDadosPersonagem(player);
+		});
+
+		let editButton = document.getElementById(`editar${player.id}`);
+		editButton.addEventListener("click", (e) => {
+			editarPersonagem(player);
 		});
 	}
 }
@@ -57,8 +66,8 @@ function lerDadosPersonagem(player) {
         </div>
     `;
 
-    const modalVisualizacao = document.getElementById('verPersonagemBody')
-    modalVisualizacao.innerHTML = dadosTemplate
+	const modalVisualizacao = document.getElementById("verPersonagemBody");
+	modalVisualizacao.innerHTML = dadosTemplate;
 }
 
 function submitPersonagem(event) {
@@ -81,6 +90,138 @@ function submitPersonagem(event) {
 	renderizaPlayers();
 	return false;
 }
+
+function editarPersonagem(player) {
+	const template = `
+    <form id="editPersonagemForm">
+        <div class="mb-3">
+            <label for="characterName" class="form-label"
+                >Nome do personagem</label
+            >
+            <input
+                type="text"
+                class="form-control"
+                id="characterName"
+                name="characterName"
+                value="${player.nome}"
+            />
+        </div>
+        <div class="mb-3">
+            <label
+                for="characterProfissao"
+                class="form-label"
+                >Profissao</label
+            >
+            <input
+                type="text"
+                class="form-control"
+                id="characterProfissao"
+                aria-describedby="emailHelp"
+                name="characterProfissao"
+                value="${player.profissao}"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="characterForca" class="form-label"
+                >Força</label
+            >
+            <input
+                type="text"
+                class="form-control"
+                id="characterForca"
+                name="characterForca"
+                value="${player.forca}"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="characterVida" class="form-label"
+                >Vida</label
+            >
+            <input
+                type="text"
+                class="form-control"
+                id="characterVida"
+                name="characterVida"
+                value="${player.vida}"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="characterMana" class="form-label"
+                >mana</label
+            >
+            <input
+                type="text"
+                class="form-control"
+                id="characterMana"
+                name="characterMana"
+                value="${player.mana}"
+            />
+        </div>
+        <div class="mb-3">
+            <label
+                for="characterInteligencia"
+                class="form-label"
+                >Inteligencia</label
+            >
+            <input
+                type="text"
+                class="form-control"
+                id="characterInteligencia"
+                name="characterInteligencia"
+                value="${player.inteligencia}"
+            />
+        </div>
+        <div class="mb-3">
+            <label
+                for="characterDescricao"
+                class="form-label"
+                >Descrição do personagem</label
+            >
+            <input
+                type="text"
+                class="form-control"
+                id="characterDescricao"
+                name="characterDescricao"
+                value="${player.descricao}"
+            />
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">
+                Save changes
+            </button>
+        </div>
+    </form>
+    `;
+
+	let editarBody = document.getElementById("editarPersonagemBody");
+	editarBody.innerHTML = template;
+
+	let editForm = document.getElementById("editPersonagemForm");
+	editForm.addEventListener("submit", (e) => {
+		e.preventDefault();
+		submitEditedData(e, player.id);
+	});
+}
+
+function submitEditedData(e, antigoId) {
+	const form = new FormData(e.target);
+    const data = Object.fromEntries(form)
+    console.log(data)
+	const newPlayer = new Player(
+		data.characterName,
+		data.characterProfissao,
+		data.characterForca,
+		data.characterVida,
+		data.characterMana,
+		data.characterInteligencia,
+		antigoId,
+		data.characterDescricao
+	);
+    console.log('logando player', newPlayer)
+	fichas.updatePlayerById(id, newPlayer)
+	renderizaPlayers();
+}
+
 var id = 0;
 var fichas = new Fichas();
 const submitCharacterForm = document.getElementById("formPersonagem");

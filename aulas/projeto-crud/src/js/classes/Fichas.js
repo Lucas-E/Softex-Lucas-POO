@@ -13,14 +13,9 @@ export class Fichas{
         const player = players.find(currentPlayer => currentPlayer.id === id)
         return player;
     }
-    updatePlayerById(id, nome, profissao, forca, vida, mana, inteligencia){
-        const player = players.find(currentPlayer => currentPlayer.id === id);
-        player.setNome(nome);
-        player.setProfissao(profissao)
-        player.setForca(forca)
-        player.setVida(vida);
-        player.setMana(mana);
-        player.setInteligencia(inteligencia);
+    updatePlayerById(id, player){
+        const index = this.players.findIndex(currentPlayer => currentPlayer.id === id);
+        this.players[index] = player
     }
     deletePlayerById(id){
         const index = this.players.findIndex(player => player.id == id)

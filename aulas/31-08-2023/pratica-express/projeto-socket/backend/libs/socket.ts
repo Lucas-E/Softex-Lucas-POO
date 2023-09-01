@@ -4,7 +4,7 @@ import { Server as httpServerType } from "http";
 export default function socketInit(httpServer:httpServerType):Server{
     const io = new Server(httpServer, {
         cors:{
-            origin: 'http://localhost:3000'
+            origin: '*'
         }
     });
     io.on('connection', (socket) => {
